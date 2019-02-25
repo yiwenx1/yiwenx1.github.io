@@ -62,4 +62,4 @@ Pooling has no parameters to learn.
 ### object localization
 classification problem uses softmax to output the class. Locolization problem  add an output of four numbers: $b_x$, $b_y$, $b_h$, $b_w$ for bounding box. $b_x$ and $b_y$ is the center of bounding box.
 
-![fig. 5](https://cdn-images-1.medium.com/max/1600/1*ReZNSf_Yr7Q1nqegGirsMQ@2x.png)
+![fig. 5](./image/object_localization.png)
