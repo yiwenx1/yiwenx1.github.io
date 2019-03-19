@@ -6,6 +6,14 @@ categories:
 tags:
  - DFS
 ---
+# Tree-based DFS
+Basically, there are four ways to traverse a Tree:
+1. Level order
+2. Pre order
+3. In order
+4. Post order
+
+We can use BFS to get the level order traversal. However, we need DFS to get the other three orders of traversal.
 ## Traversal
 ![fig. 1](http://media.jiuzhang.com/markdown/images/3/15/d77b07ce-27f7-11e8-9f14-0242ac110002.jpg)
 1. Level order (BFS)
@@ -21,7 +29,7 @@ def pre_order(root, result): # recursion
     traverse(root.right, result)
 ```
 ```python
-def preorder_non_recursion():
+def preorder_non_recursion(root):
     stack = []
     preorder = []
     if not root:
