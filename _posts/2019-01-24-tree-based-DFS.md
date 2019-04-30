@@ -57,6 +57,29 @@ def in_order(root, result): # recursion
     result.append(root.val)
     traverse(root.right, result)
 ```
+```python
+def inorderTraversal(root): # iteration
+    stack = []
+    result = []
+
+    while root:
+        stack.append(root)
+        root = root.left
+    
+    while len(stack) > 0:
+        node = stack[-1]
+        result.append(node.val)
+        if not node.right: # if node.right is None
+            node = stack.pop()
+            while len(stack) > 0 and stack[-1].right == node:
+                node = stack.pop()
+        else:
+            node = node.right
+            while node:
+                stack.append(node)
+                node = node.left
+    return result
+```
 4. Post order
 
 DEBFCA
